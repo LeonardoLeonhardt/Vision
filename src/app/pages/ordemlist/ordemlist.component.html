@@ -1,0 +1,40 @@
+<section id="banner">
+    <h1>Ordens</h1>
+  </section>
+  <section id="one" class="wrapper">
+    <div class="inner">
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Cliente</th>
+              <th>Data abertura</th>
+              <th>Data Entrega</th>
+              <th>Status</th>
+              <th>Valor</th>
+              <th>Opções</th>
+            </tr>
+          </thead>
+          <tbody>
+  
+            <tr *ngFor="let ordem of listaOrdens">
+              <td>{{ordem.id}}</td>
+              <td>{{ordem.cliente}}</td>
+              <td>{{ordem.data_abe}}</td>
+              <td>{{ordem.data_ent}}</td>
+              <td>{{ordem.status}}</td>
+              <td>{{ordem.valor}}</td>
+              <td>
+                <button (click)='excluir(ordem.id)'>Excluir</button>
+                <button [routerLink]="['/pages/ordens',ordem.id]">Editar</button>
+  
+              </td>
+            </tr>
+  
+          </tbody>
+        </table>
+      </div>
+  
+    </div>s
+  </section>

@@ -1,0 +1,125 @@
+<header>
+  <div id='cssmenu'>
+    <ul>
+      <li>
+        <a [routerLink]="['home']">Home</a>
+      </li>
+      <li class='active has-sub'>
+        <a href='#'>
+          <span>Produto</span>
+        </a>
+        <ul>
+          <li class='has-sub'>
+            <a href='#'>
+              <span>Produtos</span>
+            </a>
+            <ul>
+              <li>
+                <a href='#'>
+                  <span>
+                    <a [routerLink]="['produtoslist']">Manutenção</a>
+                  </span>
+                </a>
+              </li>
+              <li class='last'>
+                <a href='#'>
+                  <span>
+                    <a [routerLink]="['produtos']">Cadastro</a>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class='has-sub'>
+            <a href='#'>
+              <span>Classes</span>
+            </a>
+            <ul>
+              <li>
+                <a href='#'>
+                  <span>
+                    <a [routerLink]="['classeslist']">Manutenção</a>
+                  </span>
+                </a>
+              </li>
+              <li class='last'>
+                <a href='#'>
+                  <span>
+                    <a [routerLink]="['classes']">Cadastro</a>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class='active has-sub'>
+        <a href='#'>
+          <span>Clientes</span>
+        </a>
+        <ul>
+          <li class='has-sub'>
+            <a href='#'>
+              <span>Clientes</span>
+            </a>
+            <ul>
+              <li>
+                <a href='#'>
+                  <span>
+                    <a [routerLink]="['clienteslist']">Manutençao</a>
+                  </span>
+                </a>
+              </li>
+              <li class='last'>
+                <a href='#'>
+                  <span>
+                    <a [routerLink]="['clientes']">Cadastro</a>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class='has-sub'>
+            <a href='#'>
+              <span>Tabelas</span>
+            </a>
+            <ul>
+              <li>
+                <a href='#'>
+                  <span>
+                    <a [routerLink]="['tabelaslist']">Manutenção</a>
+                  </span>
+                </a>
+              </li>
+              <li class='last'>
+                <a href='#'>
+                  <span>
+                    <a [routerLink]="['tabelas']">Cadastro</a>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+     <li class='active has-sub'>
+        <a href='#'>
+          <span>Ordem de Serviço</span>
+        </a>
+        <ul>
+          <li class='has-sub'>
+            <a [routerLink]="['ordemlist']">Manutenção</a>
+          </li>
+          <li class='has-sub'>
+            <a [routerLink]="['ordens']">Cadastro</a>
+          </li>
+        </ul>
+      </li>
+      <li class='last' align="left">
+        <a href='#'>
+          <span>Logout</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>

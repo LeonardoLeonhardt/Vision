@@ -1,0 +1,35 @@
+<section id="banner">
+  <h1>Produtos</h1>
+</section>
+<section id="one" class="wrapper">
+  <div class="inner">
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Preço</th>
+            <th>Classe</th>
+            <th>Opções </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let produto of listaProdutos">
+            <td>{{produto.id}}</td>
+            <td>{{produto.nome}}</td>
+            <td>{{produto.preco}}</td>
+            <td>{{produto.classe}}</td>
+            <td>
+              <button (click)='excluir(produto.id)'>Excluir</button>
+              <button [routerLink]="['/pages/produtos',produto.id]">Editar</button>
+
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+  </div>s
+</section>

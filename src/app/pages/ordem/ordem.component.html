@@ -1,0 +1,65 @@
+<section id="banner">
+  <h1>Abrir Ordem</h1>
+</section>
+<section id="one" class="wrapper">
+  <div class="inner">
+    <div class="table-wrapper">
+      <form [formGroup]="formulario" novalidate>
+        <div class="row uniform">
+          <div class="6u$">
+            <label for="">Cliente</label>
+            <div class="select-wrapper">
+              <select name="category" id="category" formControlName="cliente">
+                <option></option>
+                <option *ngFor="let cliente of listaClientes" value = {{cliente.id}}>
+                  {{cliente.nome}}
+                 </option>
+              </select>
+            </div>
+            <div class="6u$">
+              <label for="">Produto</label>
+              <div class="select-wrapper">
+                <select name="category" id="category" formControlName="ordemproduto">
+                  <option></option>
+                  <option *ngFor="let produto of listaProdutos" value = {{produto.id}}>
+                    {{produto.nome}}
+                  </option>
+                </select>
+              </div>
+              <div class="6u 12u$(xsmall)">
+                <label for="">Data Abertura</label>
+                <input type="text" placeholder="Data" formControlName="data_abe" />
+              </div>
+              <div class="6u 12u$(xsmall)">
+                <label for="">Data Entrega</label>
+                <input type="text" placeholder="Data" formControlName="data_ent" />
+              </div>
+              <div class="6u 12u$(xsmall)">
+                <label for="">Status</label>
+                <input type="text" placeholder="Status" formControlName="status" />
+              </div>
+              <div class="6u 12u$(xsmall)">
+                <label for="">Valor</label>
+                <input type="text" placeholder="valor" formControlName="valor" />
+              </div>
+              <br>
+              <div class="12u$">
+                <ul class="actions">
+                  <li>
+                    <input type="button" value="Salvar" (click)="salvar(formulario)" [disabled]="!formulario.valid" />
+                  </li>
+                  <li>
+                    <input type="reset" value="Limpar" class="alt" />
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          </div>
+      </form>
+
+
+      </div>
+    </div>
+
+</section>

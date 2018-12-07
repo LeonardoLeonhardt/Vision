@@ -1,0 +1,37 @@
+<section id="banner">
+  <h1>Clientes</h1>
+</section>
+<section id="one" class="wrapper">
+  <div class="inner">
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>CNPJ</th>
+            <th>Tabela</th>
+            <th>Saldo</th>
+            <th>Opções</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cliente of listaClientes">
+            <td>{{cliente.id}}</td>
+            <td>{{cliente.nome}}</td>
+            <td>{{cliente.cnpj}}</td>
+            <td>{{cliente.tabela}}</td>
+            <td>{{cliente.saldo}}</td>
+            <td>
+              <button (click)='excluir(cliente.id)'>Excluir</button>
+              <button [routerLink]="['/pages/clientes',cliente.id]">Editar</button>
+
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+  </div>s
+</section>

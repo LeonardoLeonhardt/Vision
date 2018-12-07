@@ -1,0 +1,32 @@
+<section id="banner">
+  <h1>Classes</h1>
+</section>
+<section id="one" class="wrapper">
+  <div class="inner">
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Opções</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr *ngFor="let classe of listaClasses">
+            <td>{{classe.id}}</td>
+            <td>{{classe.nome}}</td>
+            <td>
+              <button (click)='excluir(classe.id)'>Excluir</button>
+              <button [routerLink]="['/pages/classes',classe.id]">Editar</button>
+
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+  </div>s
+</section>

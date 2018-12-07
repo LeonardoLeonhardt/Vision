@@ -1,0 +1,37 @@
+<section id="banner">
+  <h1>Usuarios</h1>
+</section>
+<section id="one" class="wrapper">
+  <div class="inner">
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>login</th>
+            <th>Senha</th>
+            <th>Opções</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr *ngFor="let usuario of listaUsuarios">
+            <td>{{usuario.id}}</td>
+            <td>{{usuario.nome}}</td>
+            <td>{{usuario.email}}</td>
+            <td>{{usuario.login}}</td>
+            <td>{{usuario.senha}}</td>
+            <td>
+              <button (click)='excluir(usuario.id)'>Excluir</button>
+              <button [routerLink]="['/pages/usuarios',usuario.id]">Editar</button>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+  </div>s
+</section>

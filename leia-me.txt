@@ -1,0 +1,2 @@
+para baixar os pacotes angular:
+abrir a raiz do projeto no temrminal e dar o comando: npm install

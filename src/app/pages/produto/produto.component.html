@@ -1,0 +1,42 @@
+<section id="banner">
+  <h1>Cadastro de Produtos</h1>
+</section>
+<section id="one" class="wrapper">
+  <div class="inner">
+    <div class="table-wrapper">
+      <form [formGroup]="formulario" novalidate>
+        <div class="row uniform">
+          <div class="7u 12u$(xsmall)">
+            <label for="">Nome</label>
+            <input type="text" placeholder="Nome" formControlName="nome" />
+          </div>
+          <div class="7u 12u$(xsmall)">
+            <label for="">Preço R$</label>
+            <input type="text" placeholder="Preço" formControlName="preco" />
+          </div>
+          <div class="7u$">
+              <label for="">Classe</label>
+            <div class="select-wrapper">
+              <select name="category" id="category" formControlName="classe">
+                <option></option>
+                <option *ngFor="let classe of listaClasses"value = {{classe.id}}>
+                  {{classe.nome}}
+                </option>
+              </select>
+            </div>
+          </div>
+          <div class="12u$">
+            <ul class="actions">
+              <li>
+                <input type="button" value="Salvar" (click)="salvar(formulario)" [disabled]="!formulario.valid" />
+              </li>
+              <li>
+                <input type="reset" value="Limpar" class="alt" />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

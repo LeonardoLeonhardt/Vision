@@ -1,0 +1,40 @@
+<section id="main" class="wrapper">
+  <div class="inner">
+    <header class="align-center">
+      <img src="/assets/images/image.png"  />
+    </header>
+
+    <!-- Elements -->
+    <div class="row 200%" align = "center">
+      <div class="12u$" align = "center">
+
+        <form [formGroup]="formulario" novalidate >
+          <div class="row uniform">
+            
+            <div class="6u 12u$(xsmall)">
+              <input type="text" formControlName="username" value="" placeholder="Usuário" />
+            </div>
+            <div class="6u$ 12u$(xsmall)">
+              <input type="password" formControlName="password" value="" placeholder="Senha" />
+            </div>
+
+            <div class="12u$">
+              <ul class="actions" align = "center">
+                <li>
+                  <input (click)="login(formulario)" type="submit" value="Login" />
+                </li>
+                <li>
+                  <input type="reset" value="Limpar" class="alt" />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </form>
+
+
+
+      </div>
+    </div>
+
+  </div>
+</section>

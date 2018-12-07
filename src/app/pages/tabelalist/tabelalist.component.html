@@ -1,0 +1,34 @@
+<section id="banner">
+  <h1>Tabelas</h1>
+</section>
+<section id="one" class="wrapper">
+  <div class="inner">
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Percentual</th>
+            <th>Opções</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr *ngFor="let tabela of listaTabelas">
+            <td>{{tabela.id}}</td>
+            <td>{{tabela.nome}}</td>
+            <td>{{tabela.percentual}}</td>
+            <td>
+              <button (click)='excluir(tabela.id)'>Excluir</button>
+              <button [routerLink]="['/pages/tabelas',tabela.id]">Editar</button>
+
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+  </div>s
+</section>
